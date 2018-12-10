@@ -1,0 +1,17 @@
+name: dpptam
+
+distro: kinetic
+
+build: catkin_make
+
+runtime: nvidia
+
+packages:
+  - libboost-all-dev
+  - ros-kinetic-pcl-ros
+
+volume:
+  - host_path: /DATASET
+    container_path: /DATASET
+    options: ro
+
