@@ -1,4 +1,4 @@
-#DPPTAM:
+# DPPTAM
 
 DPPTAM is a direct monocular odometry algorithm that estimates a dense reconstruction of a scene in real-time on a CPU. Highly textured image areas are mapped using standard direct mapping techniques, that minimize the photometric error across different views. We make the assumption that homogeneous-color regions belong to approximately planar areas.
 Related Publication:
@@ -9,7 +9,7 @@ Video of the results that you should expect in the example sequences:
 
 https://www.youtube.com/watch?v=1R3DkwKrWiI
 
-#License
+### License
 
 DPPTAM is licensed under the GNU General Public License Version 3 (GPLv3), please see http://www.gnu.org/licenses/gpl.html.
 
@@ -23,11 +23,11 @@ If you use DPPTAM in an academic work, please cite:
       booktitle={Proc. of The International Conference on Intelligent Robots and Systems (IROS)},
       year={2015}}
 
-#Disclaimer
+### Disclaimer
 
 This site and the code provided here are under active development. Even though we try to only release working high quality code, this version might still contain some issues. Please use it with caution.
 
-#Dependencies
+## Dependencies
 
 ROS:
 
@@ -50,11 +50,11 @@ BOOST library to launch the different threads:
     
      sudo apt-get install libboost-all-dev 
 
-#Installation
+## Installation
 
      git clone  https://github.com/alejocb/dpptam.git
     
-#Compilation
+## Compilation
 
      catkin_make --pkg dpptam
 
@@ -65,7 +65,7 @@ Code used -> Efficient Graph-Based Image Segmentation. P. Felzenszwalb, D. Hutte
     cd root/catkin_workspace/src/dpptam/ThirdParty/segment
     make
 
-#Usage
+## Usage
 
 Launch dpptam from your 'catkin_workspace' folder:
      
@@ -154,7 +154,7 @@ The initialization is performed assuming that the first map is a plane parallel 
 
 In order to exploit the benefits of the use of superpixels for low texture areas we provide the following hint: Try to 'see' the low texture area in at least 3 different views with enough parallax, so the supeprixel can be matched in multiple views. Notice that superpixels triangulation need a larger parallax than feature/photometric triangulation.
 
-# Parameters
+## Parameters
 
 There are a few tuneable parameters that you can modify in dpptam/src/data.yml:
 
@@ -182,7 +182,7 @@ limit_normalized_residual: [double]. This threshold accounts for the minimum err
 
 matchings_active_search: [int]. Number of matches required of the 3D superpixel in multiple views. Larger values -> less outliers. Default: 3. Typical values [0-4].
 
-# Contact
+## Contact
 
 If you have any issue compiling/running dpptam or you would like to know anything about the code, please contact the authors:
 
